@@ -75,11 +75,12 @@ border: solid red 2px;*/
 }
 
 .mainGame-int {
-  border: solid 2px hsla(180, 60%, 20%, 1);;
-  width: 890px;
-  height: 890px;
+  border: solid 2px hsla(180, 60%, 20%, 1);
+  width: auto;
+  height: auto;
   margin: 10px;
   display: grid;
+  justify-content: center;
   grid-template-rows: repeat(4, 210px);
   grid-template-columns: repeat(4, 210px);
   grid-gap: 10px;
@@ -149,20 +150,115 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   }
 }
 
+
 @media all and (max-width: 1409px) and (min-width:909px) {/* 909w à 1400ww */
    /* this */
 }
 
 
- @media all and (max-width: 909px) and (min-width:600px) {/*600w à 909ww*/
-   
+@media all and (max-width: 909px) and (min-width:700px) {/* 909w à 1400ww */
+  .mainGame-int {
+    grid-template-rows: repeat(4, 150px);
+    grid-template-columns: repeat(4,150px);
+    grid-gap: 5px;
+  }
+  .face{
+    font-size: 6rem;
+  }
+}
+
+@media all and (max-width: 700px) and (min-width:600px) {/* 909w à 1400ww */
+  .mainGame-int {
+    grid-template-rows: repeat(4, 140px);
+    grid-template-columns: repeat(4, 140px);
+    grid-gap: 3px;
+  }
+  .face{
+    font-size: 5.5rem;
+  }
+}
+
+
+@media all and (max-width: 600px) and (min-width:500px) {/* 909w à 1400ww */
+  .mainGame-int {
+    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(4, 120px);
+    grid-gap: 5px;
+  }
+  .face{
+    font-size: 4.3rem;
+  }
+}
+
+ @media all and (max-width: 500px) and (min-width:400px) {/*600w à 909ww*/ 
+  header, footer {
+    height: 80px;
+  }
+  .mainStart, .mainEnd {
+    height: 50px;
+  }
+  .mainGame-int {
+    border: solid 1px hsla(180, 60%, 20%, 1);
+    grid-template-rows: repeat(4, 96px);
+    grid-template-columns: repeat(4, 96px);
+    grid-gap: 5px;
+    padding: 4px;
+    margin: 4px;
+  }
+  .face{
+    font-size: 3.6rem;
+  }
+  .face, .deck{
+    border: solid hsla(180, 40%, 20%, 1) 3px;
+    border-radius: 10px;
+  }
  }
 
 
- @media all and (max-width: 609px) and (min-width:300px) {/* 300w à 600ww */
-   
+ @media all and (max-width: 400px) and (min-width:300px) {/* 300w à 600ww */
+  header, footer {
+    height: 70px;
+  }
+  .mainStart, .mainEnd {
+    height: 50px;
+  }
+  .mainGame-int {
+    border: solid 1px hsla(180, 60%, 20%, 1);
+    grid-template-rows: repeat(4, 72px);
+    grid-template-columns: repeat(4, 72px);
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .face{
+    font-size: 2.5rem;
+  }
+  .face, .deck{
+    border: solid hsla(180, 40%, 20%, 1) 2px;
+    border-radius: 5px;
+  }
  }
 
- @media all and (max-width: 300px) and (min-width:300px) {/* <300w */
-   
+ @media all and (max-width: 300px) {/* <300w */
+  header, footer {
+    height: 60px;
+  }
+  .mainStart, .mainEnd {
+    height: 40px;
+  }
+  .mainGame-int {
+    border: solid 1px hsla(180, 60%, 20%, 1);
+    grid-template-rows: repeat(4, 65px);
+    grid-template-columns: repeat(4, 65px);
+    grid-gap: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .face{
+    font-size: 2.3rem;
+  }
+  .face, .deck{
+    border: solid hsla(180, 40%, 20%, 1) 1px;
+    border-radius: 0px;
+  }
  }
