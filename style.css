@@ -1,0 +1,168 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}header {
+  background-color: hsla(180, 60%, 20%, 1);
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  color: #fff
+}
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: ridge 20px hsla(180, 40%, 80%, 1);
+  background-color: hsla(180, 40%, 70%, 1);
+  color: #000;
+}
+
+footer {
+  background-color: hsla(180, 60%, 20%, 1);
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------*/
+
+.mainTitle {
+  width: 100%;
+  height: 100px;
+  background-color: hsla(180, 40%, 20%, 1);
+  border: ridge 25px hsla(180, 40%, 70%, 1);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainStart, .mainEnd {
+  width: 100%;
+  height: 80px;
+  background-color: hsla(180, 40%, 60%, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainGame-ext {
+  /* max-width: 1400px;
+min-width: 300px; 870
+border: solid red 2px;*/
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.mainGame-int {
+  border: solid 2px hsla(180, 60%, 20%, 1);;
+  width: 890px;
+  height: 890px;
+  margin: 10px;
+  display: grid;
+  grid-template-rows: repeat(4, 210px);
+  grid-template-columns: repeat(4, 210px);
+  grid-gap: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.cardsExt {
+  border: solid pink 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  perspective:1000px;
+  margin: 5px;
+}
+
+.cardsInt {
+  /* border: solid hsla(180, 40%, 20%, 1) 5px;
+  border-radius: 20px; */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+#cardInt4 {
+}
+
+.face, .deck{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: solid hsla(180, 40%, 20%, 1) 5px;
+  border-radius: 20px;
+  backface-visibility: hidden;
+}
+
+.face{
+  font-size: 8rem;
+  text-align: center;
+  background-color: hsla(180, 40%, 90%, 1);
+  transform: rotateY(180deg);
+}
+
+.deck{
+background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1));
+
+}
+
+.active {
+  transform: rotateY(180deg)
+}
+
+
+
+
+
+ /* *******************media**********************  */
+
+
+ @media all and (min-width:1400px) {/* >1400w */
+  main{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 1409px) and (min-width:909px) {/* 909w à 1400ww */
+   /* this */
+}
+
+
+ @media all and (max-width: 909px) and (min-width:600px) {/*600w à 909ww*/
+   
+ }
+
+
+ @media all and (max-width: 609px) and (min-width:300px) {/* 300w à 600ww */
+   
+ }
+
+ @media all and (max-width: 300px) and (min-width:300px) {/* <300w */
+   
+ }
