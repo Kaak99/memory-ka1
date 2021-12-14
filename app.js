@@ -11,13 +11,6 @@ startButton.addEventListener('click', start);
 const allCards = document.querySelectorAll('.cardsExt');
 randomOrder()
 
-// for (let index = 0; index < 16; index++) {
-//   const element = array[index];
-//   allCards[index].childNodes[1].classList.toggle('active');
-// }
-
-
-
 
 // const allCards=[];
 
@@ -113,6 +106,7 @@ function gameOver(){
   //alert("Succès en " +clickCounter +" coups !")
   const scoreHTML = document.querySelector('.score');
   scoreHTML.textContent = "Dernier score : " + clickCounter + " coups !";
+  // document.location.reload();
   //zik, modal score, restart
   //start();
 }
