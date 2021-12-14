@@ -1,7 +1,16 @@
+/*-----------------*/
+/*---memory CSS ---*/
+/*-----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@100;300;400&display=swap');
+/*    font-family: 'Luckiest Guy', cursive;
+font-family: 'Roboto', sans-serif;*/
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body{
@@ -50,16 +59,66 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
+.mainTitle h1 {
+  font-family: 'Luckiest Guy', cursive;
+  letter-spacing:  0.5rem;
+  font-size: 2rem;
+}
 .mainStart, .mainEnd {
   width: 100%;
   height: 80px;
   background-color: hsla(180, 40%, 60%, 1);
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.buttonArea, .textArea, .timerArea{
+  display: flex;
   justify-content: center;
   align-items: center;
+  background-color: hsla(180, 40%, 60%, 1);
 }
+
+.startButton{
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: hsla(305, 20%, 61%,1);
+    /*background-color: hsla(305, 86%, 57%,1);*/
+    box-shadow: inset 2px 2px 3px hsla(325, 11%, 33%,1),
+                inset -2px -2px 3px hsla(334, 94%, 28%,1);
+}
+.startButton:hover {
+    background-color: hsla(305, 40%, 61%,1);
+}
+
+.startButton:active {
+    box-shadow: inset 2px 2px 3px hsla(305, 26%, 20%,1),
+    inset -2px -2px 3px hsla(305, 40%, 61%,1);
+}
+
+.textArea{
+  font-size: 1.3rem;
+  text-align: center;
+}
+.timerArea{
+font-size: 2rem;
+
+text-align: center;
+}
+
+
 
 .mainGame-ext {
   /* max-width: 1400px;
@@ -140,13 +199,24 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 
 
 
- /* *******************media**********************  */
+ /* ************_____******* media ***********_____***********  */
 
 
  @media all and (min-width:1400px) {/* >1400w */
   main{
     flex-direction: row;
     justify-content: space-around;
+  }
+
+  .mainStart, .mainEnd {
+    flex-direction: column;
+  }
+  .buttonArea, .textArea, .timerArea{
+    margin: 80px auto;
+    text-align: center;
+  }
+  .startButton{
+    padding: 20px;
   }
 }
 
@@ -212,12 +282,20 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     border: solid hsla(180, 40%, 20%, 1) 3px;
     border-radius: 10px;
   }
+  .startButton{
+    padding: 0 10px;
+    font-size: 1.2rem;
+  }
  }
 
 
  @media all and (max-width: 400px) and (min-width:300px) {/* 300w à 600ww */
   header, footer {
     height: 70px;
+  }
+  .mainTitle h1 {
+    letter-spacing:  0.3rem;
+    font-size: 1.5rem;
   }
   .mainStart, .mainEnd {
     height: 50px;
@@ -237,11 +315,22 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     border: solid hsla(180, 40%, 20%, 1) 2px;
     border-radius: 5px;
   }
+  .startButton{
+    padding: 0 5px;
+    font-size: 1rem;
+  }
+  .textArea{
+    font-size: 1.2rem;
+  }
  }
 
  @media all and (max-width: 300px) {/* <300w */
   header, footer {
     height: 60px;
+  }
+  .mainTitle h1 {
+    letter-spacing:  0.2rem;
+    font-size: 1.3rem;
   }
   .mainStart, .mainEnd {
     height: 40px;
@@ -260,5 +349,12 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   .face, .deck{
     border: solid hsla(180, 40%, 20%, 1) 1px;
     border-radius: 0px;
+  }
+  .startButton{
+    padding: 0 2px;
+    font-size: 1rem;
+  }
+  .textArea{
+    font-size: 1rem;
   }
  }
