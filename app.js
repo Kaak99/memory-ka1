@@ -1,8 +1,16 @@
 console.log("******** start ********");
 // alert("****halt!****");
 
+
+
+const mainGameInt = document.querySelector('.mainGame-int');
+mainGameInt.style.visibility = 'hidden';
+const startButton = document.querySelector('.startButton');
+startButton.addEventListener('click', start);
+
 const allCards = document.querySelectorAll('.cardsExt');
 randomOrder()
+
 
 // const allCards=[];
 
@@ -30,6 +38,14 @@ let matchCounter = 0 ;//compte les match
 
 
  // ************************fonctions ********************* //
+
+ function start(){
+  console.log("fonction start");
+  randomOrder()
+  mainGameInt.style.visibility = 'visible';
+  new Audio('./audio/coin.mp3').play()
+ }
+
 
 
 function cardReturn(){
@@ -62,7 +78,7 @@ function checkSameCards(){
     firstCard.removeEventListener('click', cardReturn);
     secondCard.removeEventListener('click', cardReturn);
     matchCounter++ ;
-    //faire son = cri de animal de la paire trouvée
+    new Audio('./audio/dog.mp3').play()
     if (matchCounter === 8) {
       gameOver()
     }
@@ -82,6 +98,8 @@ function checkSameCards(){
 function gameOver(){
   console.log("fonction gameover");
   console.log(clickCounter);
+  new Audio('./audio/yeah.mp3').play()
+  alert("Succès en " +clickCounter +" coups !")
   //zik, modal score, restart
   //start();
 }
