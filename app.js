@@ -11,6 +11,13 @@ startButton.addEventListener('click', start);
 const allCards = document.querySelectorAll('.cardsExt');
 randomOrder()
 
+// for (let index = 0; index < 16; index++) {
+//   const element = array[index];
+//   allCards[index].childNodes[1].classList.toggle('active');
+// }
+
+
+
 
 // const allCards=[];
 
@@ -19,6 +26,10 @@ let firstCard, secondCard;
 let clickIsLocked = false;
 let clickCounter = 0 ;//compte les click
 let matchCounter = 0 ;//compte les match
+
+// const scoreHTML = document.querySelector('.score');
+// scoreHTML.textContent = "Dernier score : " + clickCounter + " coups !";
+
   allCards.forEach(card => {
   card.addEventListener('click', cardReturn)
 })
@@ -99,7 +110,9 @@ function gameOver(){
   console.log("fonction gameover");
   console.log(clickCounter);
   new Audio('./audio/yeah.mp3').play()
-  alert("Succès en " +clickCounter +" coups !")
+  //alert("Succès en " +clickCounter +" coups !")
+  const scoreHTML = document.querySelector('.score');
+  scoreHTML.textContent = "Dernier score : " + clickCounter + " coups !";
   //zik, modal score, restart
   //start();
 }
