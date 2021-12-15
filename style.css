@@ -2,6 +2,10 @@
 /*---memory CSS ---*/
 /*-----------------*/
 
+.invisible{
+  visibility: hidden;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@100;300;400&display=swap');
 /*    font-family: 'Luckiest Guy', cursive;
 font-family: 'Roboto', sans-serif;*/
@@ -75,8 +79,7 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  
-}
+  }
 
 .buttonArea, .textArea, .timerArea{
   display: flex;
@@ -131,6 +134,33 @@ border: solid red 2px;*/
   align-items: center;
   margin-bottom: 20px;
   margin-top: 20px;
+  position: relative;
+}
+
+.mainGame-messageBoard{
+  background-color : hsla(0, 60%, 20%, 1);
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 10; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainGame-messageBoard div{
+  width: 90%;
+  height: 90%;
+  background-color : hsla(100, 60%, 20%, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.messageBoard{
+  font-size: 5vw;
+  text-align: center;
 }
 
 .mainGame-int {
