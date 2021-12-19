@@ -2,17 +2,14 @@ console.log("******** start ********");
 // alert("****halt!****");
 
 
-
-const mainGameInt = document.querySelector('.mainGame-int');
-mainGameInt.style.visibility = 'hidden';
-const startButton = document.querySelector('.startButton');
-startButton.addEventListener('click', start);
-
-const allCards = document.querySelectorAll('.cardsExt');
-randomOrder()
+//a retirer (epoque du bouton start)
+// const mainGameInt = document.querySelector('.mainGame-int');
+// mainGameInt.style.visibility = 'hidden';
+// const startButton = document.querySelector('.startButton');
+// startButton.addEventListener('click', start);
 
 
-// const allCards=[];
+const allCards=[];
 
 let cardIsReturned = false;
 let firstCard, secondCard;
@@ -25,8 +22,12 @@ let matchCounter = 0 ;//compte les match
 
   allCards.forEach(card => {
   card.addEventListener('click', cardReturn)
-})
 
+  
+  start();//aleatoire, vire board et affiche allcards (face cachee)
+  //surveille click cartes
+  //si game over : affiche board et cache cartes
+watchCardsclick();
 
 //  start();
 
@@ -45,7 +46,10 @@ let matchCounter = 0 ;//compte les match
 
  function start(){
   console.log("fonction start");
-  randomOrder()
+  randomOrder();
+  allCards = document.querySelectorAll('.cardsExt');
+//   console.log(allCards);
+
   mainGameInt.style.visibility = 'visible';
   new Audio('./audio/coin.mp3').play()
  }
@@ -106,6 +110,10 @@ function gameOver(){
   //alert("Succès en " +clickCounter +" coups !")
   const scoreHTML = document.querySelector('.score');
   scoreHTML.textContent = "Dernier score : " + clickCounter + " coups !";
+  const mainBoard = document.querySelector('.mainBoard');
+  mainBoard.textContent = `  🤩 Bravo !!! 🤩 
+  ✨Vous avez réussi en ${clickCounter} coups !✨
+  Cliquez pour recommencer ! `;
   // document.location.reload();
   //zik, modal score, restart
   //start();
