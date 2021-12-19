@@ -197,6 +197,12 @@ border: solid red 2px;*/
   justify-content: center;
   align-items: center;
 }
+.mainGame-messageBoard:hover div{
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 43%,1);
+}
+.mainGame-messageBoard:active div{
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
+}
 .messageBoard{
   font-size: 5vw;
   text-align: center;
@@ -204,6 +210,7 @@ border: solid red 2px;*/
 
 .mainGame-int {
   border: solid 2px hsla(180, 60%, 20%, 1);
+  border-radius: 20px;
   width: auto;
   height: auto;
   margin: 10px;
@@ -217,7 +224,7 @@ border: solid red 2px;*/
 }
 
 .cardsExt {
-  border: solid pink 1px;
+  /* border: solid pink 1px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,7 +273,10 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 
 
 /* =========================animations================================   */
-
+@keyframes grossit {
+  from {scale: -50px; opacity: 0;}
+  to {scale: 0px; opacity: 100%;}
+}
 
 /* *** =======================    MEDIA QUARIES ================================== *** */
 
