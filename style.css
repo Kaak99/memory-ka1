@@ -63,7 +63,7 @@ body{
 }header {
   background-color: hsla(180, 60%, 20%, 1);
   width: 100%;
-  height: 140px;
+  height: 100px;
   display: flex;
   justify-content: center;
   color: #fff
@@ -83,7 +83,7 @@ main{
 footer {
   background-color: hsla(180, 60%, 20%, 1);
   width: 100%;
-  height: 140px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,7 +113,7 @@ footer {
   background-clip: text;
   color: transparent;
   cursor : pointer;
-
+  transition: transform 9s ease-in-out 800ms both;
 }
 .mainTitle h1:hover {
   transform: scale(1.06);
@@ -122,14 +122,14 @@ footer {
   animation: agite 1200ms ease-in-out infinite;
 }
 @keyframes agite{
-  0%{transform:scale(1);}
+  0%{transform:scale(1.06);}
   45%{transform:scale(1.5);}
   100%{transform:scale(1);}
 }
 
 .mainStart, .mainEnd {
   width: 100%;
-  height: 80px;
+  height: 70px;
   background-color: hsla(180, 40%, 60%, 1);
   display: flex;
   flex-direction: row;
@@ -226,8 +226,8 @@ border: solid red 2px;*/
 
 .mainGame-int {
   border: solid 2px hsla(180, 60%, 20%, 1);
-  box-shadow:
-    inset 0px 0px 4px 4px hsla(305, 40%, 61%,0.4);
+  box-shadow:   inset 0px 0px 4px 4px hsla(16, 100%, 50%, 0.2);
+    /*inset 0px 0px 4px 4px hsla(305, 40%, 61%,0.4);*/
   border-radius: 20px;
   width: auto;
   height: auto;
@@ -295,7 +295,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 @keyframes grossit {
   from {scale: -50px; opacity: 0;}
   to {scale: 0px; opacity: 100%;}
-}
+}/*pas utilisé */
 
 /* *** =======================    MEDIA QUARIES ================================== *** */
 
@@ -357,14 +357,20 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   .face{
     font-size: 4.2rem;/*taille*/
   }
+  header, footer {
+    height: 70px;
+  }
+  .mainStart, .mainEnd {
+    height: 50px;
+  }
 }
 
  @media all and (max-width: 500px) and (min-width:400px) {/*600w à 909ww*/ 
   header, footer {
-    height: 80px;
+    height: 60px;
   }
   .mainStart, .mainEnd {
-    height: 50px;
+    height: 40px;
   }
   .mainGame-int {
     border: solid 1px hsla(180, 60%, 20%, 1);
@@ -390,14 +396,14 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 
  @media all and (max-width: 400px) and (min-width:300px) {/* 300w à 600ww */
   header, footer {
-    height: 70px;
+    height: 50px;
   }
   .mainTitle h1 {
     letter-spacing:  0.3rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .mainStart, .mainEnd {
-    height: 50px;
+    height: 30px;
   }
   .mainGame-int {
     border: solid 1px hsla(180, 60%, 20%, 1);
@@ -425,14 +431,14 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 
  @media all and (max-width: 300px) {/* <300w */
   header, footer {
-    height: 60px;
+    height: 40px;
   }
   .mainTitle h1 {
     letter-spacing:  0.2rem;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .mainStart, .mainEnd {
-    height: 40px;
+    height: 20px;
   }
   .mainGame-int {
     border: solid 1px hsla(180, 60%, 20%, 1);
