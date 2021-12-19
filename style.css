@@ -46,7 +46,6 @@
 	padding: 0;
 	box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  cursor : pointer;
 }
 
 .invisible{
@@ -108,7 +107,26 @@ footer {
   font-family: 'Luckiest Guy', cursive;
   letter-spacing:  0.5rem;
   font-size: 2rem;
+  background-image: linear-gradient(to bottom, yellow, red);
+  -webkit-background-clip: text;
+  /*-moz-background-clip: text;*/
+  background-clip: text;
+  color: transparent;
+  cursor : pointer;
+
 }
+.mainTitle h1:hover {
+  transform: scale(1.06);
+}
+.mainTitle h1:active {
+  animation: agite 1200ms ease-in-out infinite;
+}
+@keyframes agite{
+  0%{transform:scale(1);}
+  45%{transform:scale(1.5);}
+  100%{transform:scale(1);}
+}
+
 .mainStart, .mainEnd {
   width: 100%;
   height: 80px;
@@ -119,15 +137,14 @@ footer {
   align-items: center;
   }
 
+/*à virer-start*/  
 .buttonArea, .textArea, .timerArea{
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: hsla(180, 40%, 60%, 1);
 }
-
 .startButton{
-    border: 0;
     line-height: 2.5;
     padding: 0 20px;
     font-size: 1.3rem;
@@ -143,12 +160,10 @@ footer {
 .startButton:hover {
     background-color: hsla(305, 40%, 61%,1);
 }
-
 .startButton:active {
     box-shadow: inset 2px 2px 3px hsla(305, 26%, 20%,1),
     inset -2px -2px 3px hsla(305, 40%, 61%,1);
 }
-
 .textArea{
   font-size: 1.3rem;
   text-align: center;
@@ -157,7 +172,7 @@ footer {
 font-size: 2rem;
 text-align: center;
 }
-
+/*à virer-end*/  
 
 
 .mainGame-ext {
@@ -172,6 +187,7 @@ border: solid red 2px;*/
   margin-bottom: 20px;
   margin-top: 20px;
   position: relative;
+  cursor : pointer;
 }
 
 .mainGame-messageBoard{
@@ -210,6 +226,8 @@ border: solid red 2px;*/
 
 .mainGame-int {
   border: solid 2px hsla(180, 60%, 20%, 1);
+  box-shadow:
+    inset 0px 0px 4px 4px hsla(305, 40%, 61%,0.4);
   border-radius: 20px;
   width: auto;
   height: auto;
@@ -243,7 +261,8 @@ border: solid red 2px;*/
   transform-style: preserve-3d;
 }
 
-#cardInt4 {
+.cardsExt:hover {
+  transform: scale(1.02) rotate(2deg);
 }
 
 .face, .deck{
@@ -256,7 +275,7 @@ border: solid red 2px;*/
 }
 
 .face{
-  font-size: 8rem;
+  font-size: 7.9rem;/*taille*/
   text-align: center;
   background-color: hsla(180, 40%, 90%, 1);
   transform: rotateY(180deg);
@@ -313,7 +332,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     grid-gap: 5px;
   }
   .face{
-    font-size: 6rem;
+    font-size: 5.9rem;/*taille*/
   }
 }
 
@@ -324,7 +343,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     grid-gap: 3px;
   }
   .face{
-    font-size: 5.5rem;
+    font-size: 5.4rem;/*taille*/
   }
 }
 
@@ -336,7 +355,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     grid-gap: 5px;
   }
   .face{
-    font-size: 4.3rem;
+    font-size: 4.2rem;/*taille*/
   }
 }
 
@@ -356,7 +375,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     margin: 4px;
   }
   .face{
-    font-size: 3.6rem;
+    font-size: 3.5rem;/*taille*/
   }
   .face, .deck{
     border: solid hsla(180, 40%, 20%, 1) 3px;
@@ -389,7 +408,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     margin: 0px;
   }
   .face{
-    font-size: 2.5rem;
+    font-size: 2.4rem;/*taille*/
   }
   .face, .deck{
     border: solid hsla(180, 40%, 20%, 1) 2px;
@@ -424,7 +443,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     margin: 0px;
   }
   .face{
-    font-size: 2.3rem;
+    font-size: 2.2rem;/*taille*/
   }
   .face, .deck{
     border: solid hsla(180, 40%, 20%, 1) 1px;
