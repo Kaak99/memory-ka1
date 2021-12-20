@@ -26,9 +26,13 @@ const messageBoardHTML = document.querySelector(".messageBoard");
 const allCards = document.querySelectorAll(".cardsExt");
 //console.log(allCards);
 
+
+
+
 start();
 
 // ************************fonctions ********************* //
+
 function start() {
   console.log("-----start------");
   randomOrder();
@@ -44,11 +48,11 @@ function start() {
     });
   });
 }
-// function cardReturn(){
-//   //console.log("o");
-// }
+
+
 function cardReturn() {
   console.log("-----cardReturn------");
+
   if (clickIsLocked) return; //empeche select + de 2 cartes
   clickCounter++; //sinon on compte un clic
   //console.log(clickCounter);
@@ -72,6 +76,7 @@ function cardReturn() {
   }
 }
 
+
 function checkSameCards() {
   console.log("-----checkSameCards------");
   if (
@@ -94,6 +99,7 @@ function checkSameCards() {
   }
 }
 
+
 function gameOver() {
   console.log("-----gameOver------");
   //console.log("fonction gameover");
@@ -112,6 +118,7 @@ function gameOver() {
   preStart();
 }
 
+
 function preStart() {
   console.log("-----preStart------");
 
@@ -120,6 +127,7 @@ function preStart() {
     start();
   });
 }
+
 
 function randomOrder() {
   console.log("-----randomOrder------");
@@ -146,4 +154,13 @@ puis audioYeah.play();
 puis audioCoin.play();
 puis audioDog.play();
 ...
+*/
+
+
+/*
+const h1HTML = document.querySelector(".mainTitle h1");
+allBoardHTML.addEventListener("click", function () {
+  h1HTML.classList.add("descend");
+})
+
 */
