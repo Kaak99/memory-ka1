@@ -39,6 +39,7 @@ function start() {
   
   allBoardHTML.addEventListener("click", function () {
     allBoardHTML.style.display = "none";
+    //allBoardHTML.style.zindex = "0";
     audioCoin.play()
     scoreHTML.textContent = "Dernier score : " + scoreBefore + " clicks !";
     clickCounter = 0; //compte les click
