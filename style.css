@@ -262,7 +262,7 @@ border: solid red 2px;*/
   box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
 } */
 .messageBoard{
-  font-size: 4.5vw;
+  font-size: 4.2vw;
   text-align: center;
 }
 
@@ -358,6 +358,9 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   }
   .startButton{
     padding: 20px;
+  }
+  .messageBoard{
+    font-size: 4vw;
   }
 }
 
