@@ -9,9 +9,30 @@ console.log("******** start ********");
 
 //const allCards=[];
 
+// let collection1 = [
+//   ["dog","🐶","./audio/dog.mp3"]
+// ];
+
+let collection01 = [
+  {name:"dog",image:"🐶",sound:"./audio/dog.mp3"},
+  {name:"frog",image:"🐸",sound:"./audio/frog.mp3"},
+  {name:"whale",image:"🐳",sound:"./audio/whale.mp3"},
+  {name:"chicken",image:"🐥",sound:"./audio/chicken.mp3"},
+  {name:"elephant",image:"🐘",sound:"./audio/elephant.mp3"},
+  {name:"parrot",image:"🦜",sound:"./audio/parrot.mp3"},
+  {name:"bee",image:"🐝",sound:"./audio/bee.mp3"},
+  {name:"pig",image:"🐷",sound:"./audio/pig.mp3"}
+];
+
+/*let audio = new Audio('./audio/yeah.mp3');*/
+//new Audio("./audio/yeah.mp3").play(); 
+//new Audio(collection01[dataId].sound).play(); 
+
+let audioEachPair ="";//contiendra les fichiers audio à jouer à chaque pzaire trouvée
 let audioCoin = new Audio('./audio/coin.mp3');
 let audioDog = new Audio('./audio/dog.mp3');
 let audioYeah = new Audio("./audio/yeah.mp3");
+let audioFlip = new Audio("./audio/flip.wav");
 
 let cardIsReturned = false;
 let firstCard, secondCard;
@@ -61,6 +82,7 @@ function cardReturn() {
   clickCounter++; //sinon on compte un clic
   //console.log(clickCounter);
   //console.log(this.childNodes[1]);
+  audioFlip.play(); 
   this.childNodes[1].classList.toggle("active");
   if (!cardIsReturned) {
     cardIsReturned = true;
@@ -83,13 +105,15 @@ function cardReturn() {
 
 function checkSameCards() {
   console.log("-----checkSameCards------");
+  let dataId=firstCard.getAttribute("data-id")
   if (
-    firstCard.getAttribute("data-attr") === secondCard.getAttribute("data-attr")
+    dataId === secondCard.getAttribute("data-id")
   ) {
     firstCard.removeEventListener("click", cardReturn);
     secondCard.removeEventListener("click", cardReturn);
     matchCounter++;
-    audioDog.play();
+    new Audio(collection01[dataId].sound).play(); 
+    //audioDog.play();
     if (matchCounter === 8) {
       gameOver();
     }
