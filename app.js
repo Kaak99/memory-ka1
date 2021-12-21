@@ -19,6 +19,7 @@ let clickIsLocked = false;
 let clickCounter = 0; //compte les click
 let matchCounter = 0; //compte les match
 let scoreBefore = 0; //score d'avant
+console.log(scoreBefore);
 
 const scoreHTML = document.querySelector(".score");
 const allBoardHTML = document.querySelector(".mainGame-messageBoard");
@@ -35,13 +36,15 @@ start();
 
 function start() {
   console.log("-----start------");
+  scoreBefore = localStorage.getItem('scoreBefore')? localStorage.getItem('scoreBefore'): 0; //score d'avant
+  scoreHTML.textContent = "Dernier score : " + scoreBefore + " clicks !";
   randomOrder();
   
   allBoardHTML.addEventListener("click", function () {
     allBoardHTML.style.display = "none";
     //allBoardHTML.style.zindex = "0";
     audioCoin.play()
-    scoreHTML.textContent = "Dernier score : " + scoreBefore + " clicks !";
+   
     clickCounter = 0; //compte les click
     matchCounter = 0; //compte les match
     allCards.forEach((card) => {
@@ -115,7 +118,8 @@ function gameOver() {
 
       Cliquez pour recommencer ! `;
   //pas de retour à la ligne avec textContent(meme avec r\n \n ou \u00a0)
-  scoreBefore = clickCounter;
+  //scoreBefore = clickCounter;
+  localStorage.setItem('scoreBefore', clickCounter);
   preStart();
 }
 
