@@ -122,10 +122,10 @@ footer {
   /* transform:scale(1.5); */
   
 }
-/* .mainTitle h1:hover {
-  transition: transform 9s ease-in-out 800ms both;
+.mainTitle h1:hover {
+  transition: transform 500ms ease ;
   transform: scale(1.06);
-} */
+}
 .agitation {
   animation: agite 1000ms ease-in-out infinite;
 }
@@ -255,12 +255,12 @@ border: solid red 2px;*/
   justify-content: center;
   align-items: center;
 }
-/* .mainGame-messageBoard:hover div{
+.mainGame-messageBoard:hover div{
   box-shadow: 0px 0px 20px 5px hsla(325, 11%, 43%,1);
 }
 .mainGame-messageBoard:active div{
   box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
-} */
+}
 .messageBoard{
   font-size: 4.2vw;
   text-align: center;
