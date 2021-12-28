@@ -7,30 +7,136 @@ console.log("******** start ********");
 // const startButton = document.querySelector('.startButton');
 // startButton.addEventListener('click', start);
 
-//const allCards=[];
-
-// let collection1 = [
-//   ["dog","🐶","./audio/dog.mp3"]
-// ];
+let whichCollection = [];
 
 let collection01 = [
-  {name:"dog",image:"🐶",sound:"./audio/dog.mp3"},
-  {name:"frog",image:"🐸",sound:"./audio/frog.mp3"},
-  {name:"whale",image:"🐳",sound:"./audio/whale.mp3"},
-  {name:"chicken",image:"🐥",sound:"./audio/chicken.mp3"},
-  {name:"elephant",image:"🐘",sound:"./audio/elephant.mp3"},
-  {name:"parrot",image:"🦜",sound:"./audio/parrot.mp3"},
-  {name:"bee",image:"🐝",sound:"./audio/bee.mp3"},
-  {name:"pig",image:"🐷",sound:"./audio/pig.mp3"}
+  { name: "dog", image: "🐶", sound: "./audio/dog.mp3" },
+  { name: "frog", image: "🐸", sound: "./audio/frog.mp3" },
+  { name: "whale", image: "🐳", sound: "./audio/whale.mp3" },
+  { name: "chicken", image: "🐥", sound: "./audio/chicken.mp3" },
+  { name: "elephant", image: "🐘", sound: "./audio/elephant.mp3" },
+  { name: "parrot", image: "🦜", sound: "./audio/parrot.mp3" },
+  { name: "bee", image: "🐝", sound: "./audio/bee.mp3" },
+  { name: "pig", image: "🐷", sound: "./audio/pig.mp3" },
+];
+
+let collection02 = [
+  { name: "cat", image: "🐱", sound: "./audio/cat.mp3" },
+  { name: "sheep", image: "🐑", sound: "./audio/sheep.mp3" },
+  { name: "owl", image: "🦉", sound: "./audio/owl.mp3" },
+  { name: "cow", image: "🐄", sound: "./audio/cow.mp3" },
+  { name: "horse", image: "🐴", sound: "./audio/horse.mp3" },
+  { name: "duck", image: "🦆", sound: "./audio/duck.mp3" },
+  { name: "goat", image: "🐐", sound: "./audio/goat.wav" },
+  { name: "coq", image: "🐓", sound: "./audio/coq.mp3" },
+];
+
+let collection03 = [
+  { name: "loup", image: "🐺", sound: "./audio/loup.mp3" },
+  { name: "lion", image: "🦁", sound: "./audio/loup.mp3" },
+  { name: "tigre", image: "🐯", sound: "./audio/loup.mp3" },
+  { name: "ours", image: "🐻", sound: "./audio/loup.mp3" },
+  { name: "bat", image: "🦇", sound: "./audio/loup.mp3" },
+  { name: "spider", image: "🕷️", sound: "./audio/loup.mp3" },
+  { name: "requin", image: "🦈", sound: "./audio/loup.wav" },
+  { name: "snake", image: "🐍", sound: "./audio/loup.mp3" },
+];
+
+let collection04 = [
+  { name: "fou", image: "🤪", sound: "./audio/tuut.mp3" },
+  { name: "lol", image: "😄", sound: "./audio/tuut.mp3" },
+  { name: "whaou", image: "🤩", sound: "./audio/tuut.mp3" },
+  { name: "blink", image: "😉", sound: "./audio/tuut.mp3" },
+  { name: "hum", image: "🤨", sound: "./audio/tuut.mp3" },
+  { name: "fete", image: "🥳", sound: "./audio/tuut.mp3" },
+  { name: "love", image: "🥰", sound: "./audio/tuut.wav" },
+  { name: "dort", image: "😴", sound: "./audio/tuut.mp3" },
+];
+
+let collection05 = [
+  { name: "ogre", image: "👹", sound: "./audio/creepy2.mp3" },
+  { name: "robot", image: "🤖", sound: "./audio/creepy2.mp3" },
+  { name: "disguise", image: "🥸", sound: "./audio/creepy2.mp3" },
+  { name: "demon", image: "👿", sound: "./audio/creepy2.mp3" },
+  { name: "ghost", image: "👻", sound: "./audio/creepy2.mp3" },
+  { name: "alien", image: "👽", sound: "./audio/creepy2.mp3" },
+  { name: "invaders", image: "👾", sound: "./audio/creepy2.mp3" },
+  { name: "mask", image: "👺", sound: "./audio/creepy2.mp3" },
+];
+
+let collection06 = [
+  { name: "fou", image: "🤪", sound: "./audio/tuut.mp3" },
+  { name: "lol", image: "😄", sound: "./audio/tuut.mp3" },
+  { name: "whaou", image: "🤩", sound: "./audio/tuut.mp3" },
+  { name: "blink", image: "😉", sound: "./audio/tuut.mp3" },
+  { name: "hum", image: "🤨", sound: "./audio/tuut.mp3" },
+  { name: "fete", image: "🥳", sound: "./audio/tuut.mp3" },
+  { name: "love", image: "🥰", sound: "./audio/tuut.mp3" },
+  { name: "dort", image: "😴", sound: "./audio/tuut.mp3" },
+];
+
+let collection07 = [
+  { name: "brocoli", image: "🥦", sound: "./audio/eat.mp3" },
+  { name: "oignon", image: "🧅", sound: "./audio/eat.mp3" },
+  { name: "carotte", image: "🥕", sound: "./audio/eat.mp3" },
+  { name: "poivron", image: "🫑", sound: "./audio/eat.mp3" },
+  { name: "tomate", image: "🍅", sound: "./audio/eat.mp3" },
+  { name: "mais", image: "🌽", sound: "./audio/eat.mp3" },
+  { name: "patate", image: "🥔", sound: "./audio/eat.mp3" },
+  { name: "aubergine", image: "🍆", sound: "./audio/eat.mp3" },
+];
+
+let collection08 = [
+  { name: "raisin", image: "🍇", sound: "./audio/eat.mp3" },
+  { name: "fraise", image: "🍓", sound: "./audio/eat.mp3" },
+  { name: "pomme", image: "🍎", sound: "./audio/eat.mp3" },
+  { name: "poire", image: "🍐", sound: "./audio/eat.mp3" },
+  { name: "peche", image: "🍑", sound: "./audio/eat.mp3" },
+  { name: "cerise", image: "🍒", sound: "./audio/eat.mp3" },
+  { name: "banane", image: "🍌", sound: "./audio/eat.mp3" },
+  { name: "mandarine", image: "🍊", sound: "./audio/eat.mp3" },
+];
+
+let collection09 = [
+  { name: "gift", image: "🎁", sound: "./audio/hohoho.mp3" },
+  { name: "cake", image: "🎂", sound: "./audio/hohoho.mp3" },
+  { name: "champagne", image: "🍾", sound: "./audio/hohoho.mp3" },
+  { name: "snowguy", image: "⛄", sound: "./audio/hohoho.mp3" },
+  { name: "halloween", image: "🎃", sound: "./audio/hohoho.mp3" },
+  { name: "clown", image: "🤡", sound: "./audio/hohoho.mp3" },
+  { name: "ballon", image: "🎈", sound: "./audio/hohoho.mp3" },
+  { name: "noel", image: "🎅", sound: "./audio/hohoho.mp3" },
+];
+
+let collection10 = [
+  { name: "zombi", image: "🧟", sound: "./audio/ghost.mp3" },
+  { name: "vampire", image: "🧛", sound: "./audio/ghost.mp3" },
+  { name: "genie", image: "🧞", sound: "./audio/ghost.mp3" },
+  { name: "sirene", image: "🧜‍♀️", sound: "./audio/win2.mp3" },
+  { name: "heros", image: "🦸", sound: "./audio/win2.mp3" },
+  { name: "chateau", image: "🏰", sound: "./audio/win2.mp3" },
+  { name: "dragon", image: "🐉", sound: "./audio/ghost.mp3" },
+  { name: "licorne", image: "🦄", sound: "./audio/win2.mp3" },
+];
+
+let collection11 = [
+  { name: "france", image: "🇫🇷", sound: "./audio/tuut.mp3" },
+  { name: "canada", image: "🇨🇦", sound: "./audio/tuut.mp3" },
+  { name: "suisse", image: "🇨🇭", sound: "./audio/tuut.mp3" },
+  { name: "danois", image: "🇩🇰", sound: "./audio/tuut.mp3" },
+  { name: "chinois", image: "🇨🇳", sound: "./audio/tuut.mp3" },
+  { name: "ru", image: "🇬🇧", sound: "./audio/tuut.mp3" },
+  { name: "japon", image: "🇯🇵", sound: "./audio/tuut.mp3" },
+  { name: "usa", image: "🇺🇸", sound: "./audio/tuut.mp3" },
 ];
 
 /*let audio = new Audio('./audio/yeah.mp3');*/
-//new Audio("./audio/yeah.mp3").play(); 
-//new Audio(collection01[dataId].sound).play(); 
+//new Audio("./audio/yeah.mp3").play();
+//new Audio(collection01[dataId].sound).play();
 
-let audioEachPair ="";//contiendra les fichiers audio à jouer à chaque pzaire trouvée
-let audioCoin = new Audio('./audio/coin.mp3');
-let audioDog = new Audio('./audio/dog.mp3');
+let audioEachPair = ""; //contiendra les fichiers audio à jouer à chaque pzaire trouvée
+let audioCoin = new Audio("./audio/coin.mp3");
+let audioDog = new Audio("./audio/dog.mp3");
 let audioYeah = new Audio("./audio/yeah.mp3");
 let audioFlip = new Audio("./audio/flip.wav");
 
@@ -44,28 +150,32 @@ console.log(scoreBefore);
 
 const scoreHTML = document.querySelector(".score");
 const allBoardHTML = document.querySelector(".mainGame-messageBoard");
+const cardGroupHTML = document.querySelector(".mainGame-int");
 const messageBoardHTML = document.querySelector(".messageBoard");
-const allCards = document.querySelectorAll(".cardsExt");
+let allCards = [];//tableau contenant tutes les cartes
 //console.log(allCards);
 
-
-
-
+whichCollection = collection10;
 start();
 
 // ************************fonctions ********************* //
 
 function start() {
   console.log("-----start------");
-  scoreBefore = localStorage.getItem('scoreBefore')? localStorage.getItem('scoreBefore'): 0; //score d'avant
+  afficheCollection(collection10);
+  scoreBefore = localStorage.getItem("scoreBefore")
+    ? localStorage.getItem("scoreBefore")
+    : 0; //score d'avant
   scoreHTML.textContent = "Dernier score : " + scoreBefore + " clicks !";
-  randomOrder();
   
+  
+  randomOrder();
+console.log("-----ensuite?------");
   allBoardHTML.addEventListener("click", function () {
     allBoardHTML.style.display = "none";
     //allBoardHTML.style.zindex = "0";
-    audioCoin.play()
-   
+    audioCoin.play();
+
     clickCounter = 0; //compte les click
     matchCounter = 0; //compte les match
     allCards.forEach((card) => {
@@ -74,7 +184,6 @@ function start() {
   });
 }
 
-
 function cardReturn() {
   console.log("-----cardReturn------");
 
@@ -82,7 +191,7 @@ function cardReturn() {
   clickCounter++; //sinon on compte un clic
   //console.log(clickCounter);
   //console.log(this.childNodes[1]);
-  audioFlip.play(); 
+  audioFlip.play();
   this.childNodes[1].classList.toggle("active");
   if (!cardIsReturned) {
     cardIsReturned = true;
@@ -102,17 +211,14 @@ function cardReturn() {
   }
 }
 
-
 function checkSameCards() {
   console.log("-----checkSameCards------");
-  let dataId=firstCard.getAttribute("data-id")
-  if (
-    dataId === secondCard.getAttribute("data-id")
-  ) {
+  let dataId = firstCard.getAttribute("data-id");
+  if (dataId === secondCard.getAttribute("data-id")) {
     firstCard.removeEventListener("click", cardReturn);
     secondCard.removeEventListener("click", cardReturn);
     matchCounter++;
-    new Audio(collection01[dataId].sound).play(); 
+    new Audio(whichCollection[dataId].sound).play();
     //audioDog.play();
     if (matchCounter === 8) {
       gameOver();
@@ -126,7 +232,6 @@ function checkSameCards() {
     }, 1200);
   }
 }
-
 
 function gameOver() {
   console.log("-----gameOver------");
@@ -143,10 +248,9 @@ function gameOver() {
       Cliquez pour recommencer ! `;
   //pas de retour à la ligne avec textContent(meme avec r\n \n ou \u00a0)
   //scoreBefore = clickCounter;
-  localStorage.setItem('scoreBefore', clickCounter);
+  localStorage.setItem("scoreBefore", clickCounter);
   preStart();
 }
-
 
 function preStart() {
   console.log("-----preStart------");
@@ -157,7 +261,6 @@ function preStart() {
   });
 }
 
-
 function randomOrder() {
   console.log("-----randomOrder------");
   allCards.forEach((card) => {
@@ -167,6 +270,124 @@ function randomOrder() {
   });
 }
 
+/*va afficher le groupe de cartes choisi dans <mainGame-int> */
+function afficheCollection(collectionId) {
+  console.log("-----afficheCollection------");
+  cardGroupHTML.innerHTML = `
+  <div class="cardsExt" id="cardExt1" data-id="0" data-attr=${collectionId[0].name}>
+    <div class="cardsInt">
+      <div class="face">${collectionId[0].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt2" data-id="1" data-attr=${collectionId[1].name}>
+    <div class="cardsInt">
+      <div class="face">${collectionId[1].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt3" data-id="2" data-attr=${collectionId[2].name}>
+    <div class="cardsInt" id="cardInt3">
+      <div class="face">${collectionId[2].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt4" data-id="3" data-attr=${collectionId[3].name}>
+    <div class="cardsInt" id="cardInt4">
+      <div class="face">${collectionId[3].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt5" data-id="4" data-attr=${collectionId[4].name}>
+    <div class="cardsInt" id="cardInt5">
+      <div class="face">${collectionId[4].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt6" data-id="5" data-attr=${collectionId[5].name}>
+    <div class="cardsInt" id="cardInt6">
+      <div class="face">${collectionId[5].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt7" data-id="6" data-attr=${collectionId[6].name}>
+    <div class="cardsInt" id="cardInt7">
+      <div class="face">${collectionId[6].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt8" data-id="7" data-attr=${collectionId[7].name}>
+    <div class="cardsInt" id="cardInt8">
+      <div class="face">${collectionId[7].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt9" data-id="0" data-attr=${collectionId[0].name}>
+    <div class="cardsInt" id="cardInt9">
+      <div class="face">${collectionId[0].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt10" data-id="1" data-attr=${collectionId[1].name}>
+    <div class="cardsInt" id="cardInt10">
+      <div class="face">${collectionId[1].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt11" data-id="2" data-attr=${collectionId[2].name}>
+    <div class="cardsInt" id="cardInt11">
+      <div class="face">${collectionId[2].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt12" data-id="3" data-attr=${collectionId[3].name}>
+    <div class="cardsInt" id="cardInt12">
+      <div class="face">${collectionId[3].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt13" data-id="4" data-attr=${collectionId[4].name}>
+    <div class="cardsInt" id="cardInt13">
+      <div class="face">${collectionId[4].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt14" data-id="5" data-attr=${collectionId[5].name}>
+    <div class="cardsInt" id="cardInt14">
+      <div class="face">${collectionId[5].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt15" data-id="6" data-attr=${collectionId[6].name}>
+    <div class="cardsInt" id="cardInt15">
+      <div class="face">${collectionId[6].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+
+  <div class="cardsExt" id="cardExt16" data-id="7" data-attr=${collectionId[7].name}>
+    <div class="cardsInt" id="cardInt16">
+      <div class="face">${collectionId[7].image}</div>
+      <div class="deck"></div>
+    </div>
+  </div>
+`;
+  allCards = document.querySelectorAll(".cardsExt");//affecte le tableau de cartes
+} // /fin fonction afficheCollection
 
 /*
 plutot que 
@@ -184,7 +405,6 @@ puis audioCoin.play();
 puis audioDog.play();
 ...
 */
-
 
 /*
 const h1HTML = document.querySelector(".mainTitle h1");
