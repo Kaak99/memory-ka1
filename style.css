@@ -260,7 +260,7 @@ border: solid red 2px;*/
 .messageBoard{
   font-size: 3.5vw;
   text-align: center;
-  text-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1);
+  text-shadow: 6px 6px 10px hsla(325, 11%, 33%,1);
 }
 
 .buttons{
@@ -276,7 +276,8 @@ border: solid red 2px;*/
   height: auto;
   font-size: 3vw;
   border-radius:40px;
-  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1);
+  box-shadow: 0px 0px 10px 5px hsla(325, 11%, 33%,1);
+  background-color : var(--main-color10);
 }
 .buttons button:hover{
   box-shadow: 0px 0px 20px 5px hsla(325, 11%, 43%,1);
