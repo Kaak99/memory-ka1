@@ -168,36 +168,44 @@ function start() {
   allButtons.forEach(button => {
     button.addEventListener('click',function() {
       //retire l'élément de productTab
-      whichCollection = this.getAttribute("id");
-      console.log(whichCollection);
-      alert("wait");
+      let truc = this.getAttribute("id");
+      console.log(truc);
+      //alert("wait");
+
+      
+      afficheCollection(whichCollection);
+      randomOrder();
+      console.log("-----ensuite?------");
+      scoreBefore = localStorage.getItem("scoreBefore")  ? localStorage.getItem("scoreBefore") : 0; //score d'avant
+      scoreHTML.textContent = "Dernier score : " + scoreBefore + " clicks !";
+
+      clickCounter = 0; //compte les click
+      matchCounter = 0; //compte les match
+
+      allBoardHTML.style.display = "none";
+      audioCoin.play();
+
+      allCards.forEach((card) => {
+        card.addEventListener("click", cardReturn);
+      });
+
     })
   });
-
-
   
 
-  afficheCollection(whichCollection);
-  scoreBefore = localStorage.getItem("scoreBefore")
-    ? localStorage.getItem("scoreBefore")
-    : 0; //score d'avant
-  scoreHTML.textContent = "Dernier score : " + scoreBefore + " clicks !";
-  
-  
-  randomOrder();
-console.log("-----ensuite?------");
-  allBoardHTML.addEventListener("click", function () {
-    allBoardHTML.style.display = "none";
-    //allBoardHTML.style.zindex = "0";
-    audioCoin.play();
-
-    clickCounter = 0; //compte les click
-    matchCounter = 0; //compte les match
-    allCards.forEach((card) => {
-      card.addEventListener("click", cardReturn);
-    });
-  });
 }
+//   allBoardHTML.addEventListener("click", function () {
+//     allBoardHTML.style.display = "none";
+//     //allBoardHTML.style.zindex = "0";
+//     audioCoin.play();
+
+//     clickCounter = 0; //compte les click
+//     matchCounter = 0; //compte les match
+//     allCards.forEach((card) => {
+//       card.addEventListener("click", cardReturn);
+//     });
+//   });
+// }
 
 function cardReturn() {
   console.log("-----cardReturn------");
@@ -428,3 +436,4 @@ allBoardHTML.addEventListener("click", function () {
 })
 
 */
+console.log("123");
