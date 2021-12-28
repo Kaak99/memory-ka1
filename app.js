@@ -153,7 +153,7 @@ const allBoardHTML = document.querySelector(".mainGame-messageBoard");
 const cardGroupHTML = document.querySelector(".mainGame-int");
 const messageBoardHTML = document.querySelector(".messageBoard");
 
-let allButtons=document.querySelectorAll(".buttons");
+let allCollecButtons=document.querySelectorAll(".collecButton");
 let allCards = [];//tableau contenant tutes les cartes
 //console.log(allCards);
 
@@ -165,11 +165,25 @@ start();
 function start() {
   console.log("-----start------");
 
-  allButtons.forEach(button => {
+  allCollecButtons.forEach(button => {
     button.addEventListener('click',function() {
       //retire l'élément de productTab
-      let truc = this.getAttribute("id");
-      console.log(truc);
+      let choixCollection = this.getAttribute("id");
+
+      switch (choixCollection) {
+        case 'collection01': whichCollection = collection01; break;
+        case 'collection02': whichCollection = collection02; break;
+        case 'collection03': whichCollection = collection03; break;
+        case 'collection04': whichCollection = collection04; break;
+        case 'collection05': whichCollection = collection05; break;
+        case 'collection06': whichCollection = collection06; break;
+        case 'collection07': whichCollection = collection07; break;
+        case 'collection08': whichCollection = collection08; break;
+        case 'collection09': whichCollection = collection09; break;
+        case 'collection10': whichCollection = collection10; break;
+        default: console.log(`Sorry, we are out of ${choixCollection}.`);
+      }
+      console.log(whichCollection);
       //alert("wait");
 
       
