@@ -38,7 +38,7 @@ let collection03 = [
   { name: "ours", image: "🐻", sound: "./audio/loup.mp3" },
   { name: "bat", image: "🦇", sound: "./audio/loup.mp3" },
   { name: "spider", image: "🕷️", sound: "./audio/loup.mp3" },
-  { name: "requin", image: "🦈", sound: "./audio/loup.wav" },
+  { name: "requin", image: "🦈", sound: "./audio/loup.mp3" },
   { name: "snake", image: "🐍", sound: "./audio/loup.mp3" },
 ];
 
@@ -49,41 +49,41 @@ let collection04 = [
   { name: "blink", image: "😉", sound: "./audio/tuut.mp3" },
   { name: "hum", image: "🤨", sound: "./audio/tuut.mp3" },
   { name: "fete", image: "🥳", sound: "./audio/tuut.mp3" },
-  { name: "love", image: "🥰", sound: "./audio/tuut.wav" },
-  { name: "dort", image: "😴", sound: "./audio/tuut.mp3" },
-];
-
-let collection05 = [
-  { name: "ogre", image: "👹", sound: "./audio/creepy2.mp3" },
-  { name: "robot", image: "🤖", sound: "./audio/creepy2.mp3" },
-  { name: "disguise", image: "🥸", sound: "./audio/creepy2.mp3" },
-  { name: "demon", image: "👿", sound: "./audio/creepy2.mp3" },
-  { name: "ghost", image: "👻", sound: "./audio/creepy2.mp3" },
-  { name: "alien", image: "👽", sound: "./audio/creepy2.mp3" },
-  { name: "invaders", image: "👾", sound: "./audio/creepy2.mp3" },
-  { name: "mask", image: "👺", sound: "./audio/creepy2.mp3" },
-];
-
-let collection06 = [
-  { name: "fou", image: "🤪", sound: "./audio/tuut.mp3" },
-  { name: "lol", image: "😄", sound: "./audio/tuut.mp3" },
-  { name: "whaou", image: "🤩", sound: "./audio/tuut.mp3" },
-  { name: "blink", image: "😉", sound: "./audio/tuut.mp3" },
-  { name: "hum", image: "🤨", sound: "./audio/tuut.mp3" },
-  { name: "fete", image: "🥳", sound: "./audio/tuut.mp3" },
   { name: "love", image: "🥰", sound: "./audio/tuut.mp3" },
   { name: "dort", image: "😴", sound: "./audio/tuut.mp3" },
 ];
 
+let collection05 = [
+  { name: "ogre", image: "👹", sound: "./audio/grr.mp3" },
+  { name: "robot", image: "🤖", sound: "./audio/grr.mp3" },
+  { name: "dragonhead", image: "🐲", sound: "./audio/grr.mp3" },
+  { name: "demon", image: "👿", sound: "./audio/grr.mp3" },
+  { name: "ghost", image: "👻", sound: "./audio/grr.mp3" },
+  { name: "alien", image: "👽", sound: "./audio/grr.mp3" },
+  { name: "invaders", image: "👾", sound: "./audio/grr.mp3" },
+  { name: "mask", image: "👺", sound: "./audio/grr.mp3" },
+];
+
+let collection06 = [
+  { name: "sun", image: "🌞", sound: "./audio/soleil.mp3" },
+  { name: "moon", image: "🌜", sound: "./audio/lune.mp3" },
+  { name: "star", image: "⭐", sound: "./audio/etoile.mp3" },
+  { name: "cloud", image: "☁️", sound: "./audio/nuage.mp3" },
+  { name: "rainbow", image: "🌈", sound: "./audio/arcenciel.mp3" },
+  { name: "trefle", image: "🍀", sound: "./audio/trefle4feuille2.mp3" },
+  { name: "fleur", image: "🌷", sound: "./audio/fleur.mp3" },
+  { name: "arbre", image: "🌳", sound: "./audio/arbre.mp3" },
+];
+
 let collection07 = [
-  { name: "brocoli", image: "🥦", sound: "./audio/eat.mp3" },
-  { name: "oignon", image: "🧅", sound: "./audio/eat.mp3" },
-  { name: "carotte", image: "🥕", sound: "./audio/eat.mp3" },
-  { name: "poivron", image: "🫑", sound: "./audio/eat.mp3" },
-  { name: "tomate", image: "🍅", sound: "./audio/eat.mp3" },
-  { name: "mais", image: "🌽", sound: "./audio/eat.mp3" },
-  { name: "patate", image: "🥔", sound: "./audio/eat.mp3" },
-  { name: "aubergine", image: "🍆", sound: "./audio/eat.mp3" },
+  { name: "brocoli", image: "🥦", sound: "./audio/bite3.mp3" },
+  { name: "oignon", image: "🧅", sound: "./audio/bite3.mp3" },
+  { name: "carotte", image: "🥕", sound: "./audio/bite3.mp3" },
+  { name: "piment", image: "🌶️", sound: "./audio/cri1.mp3" },
+  { name: "tomate", image: "🍅", sound: "./audio/bite3.mp3" },
+  { name: "mais", image: "🌽", sound: "./audio/bite3.mp3" },
+  { name: "patate", image: "🥔", sound: "./audio/bite3.mp3" },
+  { name: "aubergine", image: "🍆", sound: "./audio/bite3.mp3" },
 ];
 
 let collection08 = [
@@ -112,7 +112,7 @@ let collection10 = [
   { name: "zombi", image: "🧟", sound: "./audio/ghost.mp3" },
   { name: "vampire", image: "🧛", sound: "./audio/ghost.mp3" },
   { name: "genie", image: "🧞", sound: "./audio/ghost.mp3" },
-  { name: "sirene", image: "🧜‍♀️", sound: "./audio/win2.mp3" },
+  { name: "sirene", image: "🧜", sound: "./audio/win2.mp3" },
   { name: "heros", image: "🦸", sound: "./audio/win2.mp3" },
   { name: "chateau", image: "🏰", sound: "./audio/win2.mp3" },
   { name: "dragon", image: "🐉", sound: "./audio/ghost.mp3" },
@@ -152,17 +152,32 @@ const scoreHTML = document.querySelector(".score");
 const allBoardHTML = document.querySelector(".mainGame-messageBoard");
 const cardGroupHTML = document.querySelector(".mainGame-int");
 const messageBoardHTML = document.querySelector(".messageBoard");
+
+let allButtons=document.querySelectorAll(".buttons");
 let allCards = [];//tableau contenant tutes les cartes
 //console.log(allCards);
 
-whichCollection = collection10;
+whichCollection = collection07;
 start();
 
 // ************************fonctions ********************* //
 
 function start() {
   console.log("-----start------");
-  afficheCollection(collection10);
+
+  allButtons.forEach(button => {
+    button.addEventListener('click',function() {
+      //retire l'élément de productTab
+      whichCollection = this.getAttribute("id");
+      console.log(whichCollection);
+      alert("wait");
+    })
+  });
+
+
+  
+
+  afficheCollection(whichCollection);
   scoreBefore = localStorage.getItem("scoreBefore")
     ? localStorage.getItem("scoreBefore")
     : 0; //score d'avant

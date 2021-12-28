@@ -262,8 +262,22 @@ border: solid red 2px;*/
   box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
 }
 .messageBoard{
-  font-size: 4.2vw;
+  font-size: 4vw;
   text-align: center;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:5px;
+}
+.buttons button{
+  text-align: center;
+  width: 100%;
+  height: auto;
+  font-size: 3vw;
 }
 
 .mainGame-int {
@@ -360,7 +374,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     padding: 20px;
   }
   .messageBoard{
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }
 
@@ -506,6 +520,9 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   }
   .textArea{
     font-size: 1rem;
+  }
+  .buttons button{
+    font-size: 1vw;
   }
  }
 
