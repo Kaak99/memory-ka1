@@ -245,39 +245,44 @@ border: solid red 2px;*/
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius:45px;
 }
-.mainGame-messageBoard div{
-  width: 90%;
-  height: 90%;
-  background-color : var(--main-color11);
-  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1);
+.messageBoardInt{
+  width: 50%;
+  height: 100%;
+  /* background-color : var(--main-color11);
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1); */
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
-.mainGame-messageBoard:hover div{
-  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 43%,1);
-}
-.mainGame-messageBoard:active div{
-  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
-}
+
 .messageBoard{
-  font-size: 4vw;
+  font-size: 3.5vw;
   text-align: center;
+  text-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1);
 }
 
 .buttons{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin:5px;
+  flex-direction:column;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%; 
 }
 .buttons button{
   text-align: center;
-  width: 100%;
+  width:90%;
   height: auto;
   font-size: 3vw;
+  border-radius:40px;
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 33%,1);
+}
+.buttons button:hover{
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 43%,1);
+}
+.buttons button:active{
+  box-shadow: 0px 0px 20px 5px hsla(325, 11%, 55%,1);
 }
 
 .mainGame-int {
@@ -357,12 +362,26 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 
 
 
- @media all and (min-width:1400px) {/* >1400w */
+@media all and (min-width: 2000px) {/* > à 2000ww */
+  .buttons button{
+    font-size: 1.3vw;
+  }
+  .messageBoard{
+    font-size: 2vw;
+  }
+}
+
+@media all and (min-width: 1700px) and (max-width:2000px) { /* 1700w à 2000w */
+  .buttons button{
+    font-size: 1.8vw;
+  }
+}
+
+@media all and (min-width:1400px) and (max-width:1700px){/* 1400w à 1700w */
   main{
     flex-direction: row;
     justify-content: space-around;
   }
-
   .mainStart, .mainEnd {
     flex-direction: column;
   }
@@ -379,12 +398,12 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 }
 
 
-@media all and (max-width: 1409px) and (min-width:909px) {/* 909w à 1400ww */
+@media all and (min-width:909px) and (max-width: 1400px) {/* 909w à 1400ww */
    /* this */
 }
 
 
-@media all and (max-width: 909px) and (min-width:700px) {/* 909w à 1400ww */
+@media all and (min-width:700px) and (max-width: 909px) {/* 909w à 1400ww */
   .mainGame-int {
     grid-template-rows: repeat(4, 150px);
     grid-template-columns: repeat(4,150px);
@@ -395,7 +414,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   }
 }
 
-@media all and (max-width: 700px) and (min-width:600px) {/* 909w à 1400ww */
+@media all and (min-width:600px) and (max-width: 700px) {/* 909w à 1400ww */
   .mainGame-int {
     grid-template-rows: repeat(4, 140px);
     grid-template-columns: repeat(4, 140px);
@@ -407,7 +426,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
 }
 
 
-@media all and (max-width: 600px) and (min-width:500px) {/* 909w à 1400ww */
+@media all and (min-width:500px) and (max-width: 600px) {/* 909w à 1400ww */
   .mainGame-int {
     grid-template-rows: repeat(4, 120px);
     grid-template-columns: repeat(4, 120px);
@@ -422,9 +441,12 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
   .mainStart, .mainEnd {
     height: 50px;
   }
+  .messageBoard{
+    font-size: 3.2vw;
+  }
 }
 
- @media all and (max-width: 500px) and (min-width:400px) {/*600w à 909ww*/ 
+ @media all and (min-width:400px) and (max-width: 500px) {/*600w à 909ww*/ 
   header, footer {
     height: 60px;
   }
@@ -453,7 +475,7 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
  }
 
 
- @media all and (max-width: 400px) and (min-width:300px) {/* 300w à 600ww */
+ @media all and (min-width:300px) and (max-width: 400px) {/* 300w à 600ww */
   header, footer {
     height: 50px;
   }
@@ -522,7 +544,10 @@ background:radial-gradient(circle, hsla(180, 60%, 60%, 1), hsla(180, 60%, 20%, 1
     font-size: 1rem;
   }
   .buttons button{
-    font-size: 1vw;
+    font-size: 1.2vw;
+  }
+  .messageBoard{
+    font-size: 1.2vw;
   }
  }
 
