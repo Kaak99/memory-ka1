@@ -205,21 +205,9 @@ function start() {
 
     })
   });
-  
 
 }
-//   allBoardHTML.addEventListener("click", function () {
-//     allBoardHTML.style.display = "none";
-//     //allBoardHTML.style.zindex = "0";
-//     audioCoin.play();
 
-//     clickCounter = 0; //compte les click
-//     matchCounter = 0; //compte les match
-//     allCards.forEach((card) => {
-//       card.addEventListener("click", cardReturn);
-//     });
-//   });
-// }
 
 function cardReturn() {
   console.log("-----cardReturn------");
@@ -267,26 +255,29 @@ function checkSameCards() {
       secondCard.childNodes[1].classList.remove("active");
       clickIsLocked = false;
     }, 1200);
+    // console.log("!!!! 1 !!!!");
+    // console.log("!!!! 2 !!!!");
+    // console.log("!!!! 3 !!!!");
   }
 }
+
 
 function gameOver() {
   console.log("-----gameOver------");
   //console.log("fonction gameover");
   //console.log(clickCounter);
-  audioYeah.play();
-  //alert("Succès en " +clickCounter +" coups !")
-  //allBoardHTML.style.animation = 'grossit 3s';
-  allBoardHTML.style.display = "flex";
-  messageBoardHTML.innerText = `  🤩 Bravo !!! 🤩 
+  setTimeout(() => {
+    audioYeah.play();
+    allBoardHTML.style.display = "flex";
+    messageBoardHTML.innerText = `  🤩 Bravo !!! 🤩 
 
-      ✨Vous avez réussi en ${clickCounter} clicks !✨
+        ✨Vous avez réussi en ${clickCounter} clicks !✨
 
-      Cliquez pour recommencer ! `;
-  //pas de retour à la ligne avec textContent(meme avec r\n \n ou \u00a0)
-  //scoreBefore = clickCounter;
-  localStorage.setItem("scoreBefore", clickCounter);
-  preStart();
+        Cliquez pour recommencer ! `;
+    //pas de retour à la ligne avec textContent(meme avec r\n \n ou \u00a0)
+    localStorage.setItem("scoreBefore", clickCounter);
+    preStart();
+},2000);
 }
 
 function preStart() {
